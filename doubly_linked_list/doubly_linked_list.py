@@ -35,10 +35,8 @@ class DoublyLinkedList:
     def add_to_head(self, value):
         new_node = ListNode(value, None, self.head)
         if self.length == 0:
-            # if there's nothing then when you add the node it will be the tail
             self.tail = new_node
         else:
-            # if there's at least one element then there _was_ a head and we'll update it's prev
             self.head.prev = new_node
         self.head = new_node
         self.length += 1
